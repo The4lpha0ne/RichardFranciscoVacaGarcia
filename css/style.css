@@ -1,0 +1,176 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+}
+
+:root {
+    --yellow1: #FFC107;
+    --blue2: #0097A7;
+    --Charcoal: #36454F;
+    --DeepBlue: #0021F3;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+body {
+    background:hsl(0, 0%, 98%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    max-width: 375px;
+    padding: 5.6rem 0;
+}
+
+.the_header {
+    text-align: center;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+}
+
+
+
+.title1,
+.title2 {
+    font-size: 1.6rem;
+}
+
+.title1 {
+    font-weight: 200;
+    color:hsl(229, 6%, 66%);
+}
+
+.title2 {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+.h_p {
+    font-size: 1rem;
+    line-height: 1.666;
+    margin-top: 1rem
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/************************************************************/
+/************************************************************/
+
+/* .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.666rem;
+    margin-top: 5rem;
+}
+
+.card {
+    max-width: 311px;
+    padding: 9%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px hsl(229, 6%, 66%);
+    position: relative;
+    overflow: hidden;
+}
+
+.supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.card-heading {
+    color: hsl(234, 12%, 34%);
+    font-size: 1.333rem;
+}
+
+.card-paragraph {
+    font-size: 0.866rem;
+    line-height: 1.77;
+}
+
+.card-image {
+    width: 18.328%;
+    height: auto;
+    margin-top: 14.865%;  
+    margin-left: 70%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width: 376px) {
+
+
+body {
+    max-width: 100%;
+    padding: 5.333rem 11.46%
+}
+
+.header {
+    max-width: 540px;
+}
+
+.normal-heading,
+.bold-heading {
+    font-size: 2.4rem;
+}
+
+.main {
+    display: grid;
+    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    max-width: 350px;
+}
+
+.supervisor {
+    grid-area: 2/1/span 2/span 1
+}
+
+.team-builder {
+    grid-area: 1/2/span 2/span 1
+}
+
+.karma {
+    grid-area: 3/2/span 2/span 1
+}
+
+
+.calculator {
+    grid-area: 2/3/span 2/span 1
+}
+} */
