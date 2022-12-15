@@ -6,22 +6,36 @@
 }
 
 :root {
-    --yellow1: #FFC107;
-    --blue2: #0097A7;
+    --White: hsl(0, 0%, 98%);
+    --LightGray: hsl(229, 6%, 66%);
+    --DarkGray: hsl(234, 12%, 34%);
+    --AzulOscuro: hsl(228, 45%, 44%);
+    --Azul1: hsl(180, 62%, 55%);
+    --Azul2: hsl(212, 86%, 64%);
+    --Naranja: hsl(0, 78%, 62%);
+    --Amarillo: hsl(34, 97%, 64%); 
+
     --Charcoal: #36454F;
     --DeepBlue: #0021F3;
+    --BlueViolet: #8a2be2; 
+    --NeonGreen: #39ff14; 
+    --MalachiteGreen: #0BDA51; 
+    --CrimsonRed: #990000; 
+    --DeepOrange: #dc4d01;
 }
 
+/*1rem = 10px*/
 html {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
     display: grid;
     place-items: center;
     height: 100%;
 }
 
 body {
-    background:hsl(0, 0%, 98%);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background: var(--White);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,12 +49,6 @@ body {
     text-align: center;
 }
 
-p {
-    color: hsl(229, 6%, 66%);
-}
-
-
-
 .title1,
 .title2 {
     font-size: 1.6rem;
@@ -48,18 +56,36 @@ p {
 
 .title1 {
     font-weight: 200;
-    color:hsl(229, 6%, 66%);
+    color: var(--LightGray);
 }
 
 .title2 {
     font-weight: 600;
-    color: hsl(234, 12%, 34%);
+    color: var(--DarkGray);
 }
 
 .h_p {
     font-size: 1rem;
-    line-height: 1.666;
+    line-height: 1.66rem;
     margin-top: 1rem
+}
+
+p {
+    color: var(--LightGray);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 5rem;
+}
+
+.the_footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .attribution { 
@@ -68,109 +94,101 @@ p {
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--AzulOscuro); 
 }
 
 /************************************************************/
 /************************************************************/
 
-/* .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.666rem;
-    margin-top: 5rem;
-}
-
-.card {
+.the_cards {
     max-width: 311px;
     padding: 9%;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px hsl(229, 6%, 66%);
+    box-shadow: 0px 4px 10px var(--LightGray);
     position: relative;
     overflow: hidden;
 }
 
-.supervisor {
-    border-top: 4px solid hsl(180, 62%, 55%);
+.the_superv {
+    border-top: 4px solid var(--Azul1);
 }
 
 .team-builder {
-    border-top: 4px solid hsl(0, 78%, 62%);
+    border-top: 4px solid var(--Naranja);
 }
 
 .karma {
-    border-top: 4px solid hsl(34, 97%, 64%);
+    border-top: 4px solid var(--Amarillo);
 }
 
 .calculator {
-    border-top: 4px solid hsl(212, 86%, 64%);
+    border-top: 4px solid var(--Azul2);
 }
 
 .card-heading {
-    color: hsl(234, 12%, 34%);
-    font-size: 1.333rem;
+    color: var(--DarkGray);
+    font-size: 1.33rem;
 }
 
 .card-paragraph {
-    font-size: 0.866rem;
+    font-size: 0.86rem;
     line-height: 1.77;
 }
 
 .card-image {
-    width: 18.328%;
+    width: 18.32%;
     height: auto;
-    margin-top: 14.865%;  
+    margin-top: 14.86%;  
     margin-left: 70%;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+/************************************************************/
+/************************************************************/
+
+/*Los Media Queries:*/
 
 @media only screen and (min-width: 376px) {
+    body {
+        max-width: 100%;
+        padding: 5.3rem 11.46%;
+    }
+
+    .the_header {
+        max-width: 540px;
+    }
+
+    .title1,
+    .title2 {
+        font-size: 2.4rem;
+    }
+
+    .main {
+        display: grid;
+        grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .the_cards {
+        max-width: 350px;
+    }
+
+    .the_superv {
+        grid-area: 2/1/span 2/span 1
+    }
+
+    .team-builder {
+        grid-area: 1/2/span 2/span 1
+    }
+
+    .karma {
+        grid-area: 3/2/span 2/span 1
+    }
 
 
-body {
-    max-width: 100%;
-    padding: 5.333rem 11.46%
+    .calculator {
+        grid-area: 2/3/span 2/span 1
+    }
 }
 
-.header {
-    max-width: 540px;
-}
-
-.normal-heading,
-.bold-heading {
-    font-size: 2.4rem;
-}
-
-.main {
-    display: grid;
-    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.card {
-    max-width: 350px;
-}
-
-.supervisor {
-    grid-area: 2/1/span 2/span 1
-}
-
-.team-builder {
-    grid-area: 1/2/span 2/span 1
-}
-
-.karma {
-    grid-area: 3/2/span 2/span 1
-}
-
-
-.calculator {
-    grid-area: 2/3/span 2/span 1
-}
-} */
+/************************************************************/
+/************************************************************/
