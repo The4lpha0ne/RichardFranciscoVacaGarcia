@@ -15,34 +15,32 @@
     --Naranja: hsl(0, 78%, 62%);
     --Amarillo: hsl(34, 97%, 64%); 
 
-    --Charcoal: #36454F;
     --DeepBlue: #0021F3;
     --BlueViolet: #8a2be2; 
     --NeonGreen: #39ff14; 
-    --MalachiteGreen: #0BDA51; 
     --CrimsonRed: #990000; 
     --DeepOrange: #dc4d01;
 }
 
 /*1rem = 10px*/
 html {
-    font-size: 62.5%;
-    display: grid;
-    place-items: center;
+    /* font-size: 62.5%; */
     height: 100%;
+    display: grid;
+    place-items: center; 
 }
 
 body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background: var(--White);
+    height: 100%;
+    max-width: 375px;
+    padding: 5.6rem 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     position: relative;
-    max-width: 375px;
-    padding: 5.6rem 0;
 }
 
 .the_header {
@@ -55,19 +53,20 @@ body {
 }
 
 .title1 {
-    font-weight: 200;
     color: var(--LightGray);
+    font-weight: 200;
 }
 
 .title2 {
-    font-weight: 600;
     color: var(--DarkGray);
+    font-weight: 600;
 }
 
 .h_p {
     font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     line-height: 1.66rem;
-    margin-top: 1rem
 }
 
 p {
@@ -75,11 +74,56 @@ p {
 }
 
 .main {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.6rem;
-    margin-top: 5rem;
+}
+
+/************************************************************/
+/************************************************************/
+
+.the_cards {
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px var(--LightGray);
+    max-width: 311px;
+    padding: 9%;
+    overflow: hidden;
+    position: relative;
+}
+
+.the_superv {
+    border-top: 5px solid var(--Azul1);
+}
+
+.t_builder {
+    border-top: 5px solid var(--Naranja);
+}
+
+.the_karma {
+    border-top: 5px solid var(--Amarillo);
+}
+
+.the_calc {
+    border-top: 5px solid var(--Azul2);
+}
+
+.c_title {
+    color: var(--DarkGray);
+    font-size: 1.33rem;
+}
+
+.card_p {
+    font-size: 0.86rem;
+    line-height: 1.77;
+}
+
+.img1 {
+    height: auto;
+    width: 18.32%;
+    margin-top: 14.86%;  
+    margin-left: 70%;
 }
 
 .the_footer {
@@ -89,7 +133,7 @@ p {
 }
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 1.2rem; 
     text-align: center; 
 }
 
@@ -100,61 +144,15 @@ p {
 /************************************************************/
 /************************************************************/
 
-.the_cards {
-    max-width: 311px;
-    padding: 9%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px var(--LightGray);
-    position: relative;
-    overflow: hidden;
-}
-
-.the_superv {
-    border-top: 4px solid var(--Azul1);
-}
-
-.team-builder {
-    border-top: 4px solid var(--Naranja);
-}
-
-.karma {
-    border-top: 4px solid var(--Amarillo);
-}
-
-.calculator {
-    border-top: 4px solid var(--Azul2);
-}
-
-.card-heading {
-    color: var(--DarkGray);
-    font-size: 1.33rem;
-}
-
-.card-paragraph {
-    font-size: 0.86rem;
-    line-height: 1.77;
-}
-
-.card-image {
-    width: 18.32%;
-    height: auto;
-    margin-top: 14.86%;  
-    margin-left: 70%;
-}
-
-/************************************************************/
-/************************************************************/
-
 /*Los Media Queries:*/
-
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 486px) {
     body {
         max-width: 100%;
         padding: 5.3rem 11.46%;
     }
 
     .the_header {
-        max-width: 540px;
+        max-width: 54rem;
     }
 
     .title1,
@@ -164,7 +162,7 @@ p {
 
     .main {
         display: grid;
-        grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+        grid-template: repeat(4, 1fr) / repeat(3, 1fr);
         gap: 2rem;
     }
 
@@ -173,20 +171,19 @@ p {
     }
 
     .the_superv {
-        grid-area: 2/1/span 2/span 1
+        grid-area: 2/1/span 2/span 1;
     }
 
-    .team-builder {
-        grid-area: 1/2/span 2/span 1
+    .t_builder {
+        grid-area: 1/2/span 2/span 1;
     }
 
-    .karma {
-        grid-area: 3/2/span 2/span 1
+    .the_karma {
+        grid-area: 3/2/span 2/span 1;
     }
 
-
-    .calculator {
-        grid-area: 2/3/span 2/span 1
+    .the_calc {
+        grid-area: 2/3/span 2/span 1;
     }
 }
 
